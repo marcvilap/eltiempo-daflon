@@ -1,0 +1,13 @@
+---
+import Layout from '$layouts/Layout.astro'
+import BlockPlan from '$components/BlockPlan.astro'
+import image from '$assets/images/img-09.webp'
+
+const description = 'Una escapada de aventura con actividades como senderismo, ciclismo o deportes acuáticos.'
+---
+
+<Layout>
+	<BlockPlan {description} {image}>
+		<p><strong>Consejo para evitar piernas cansadas:</strong> Estira adecuadamente antes y después de las actividades físicas, usa calzado adecuado y aplica <a class="text-blue-900 underline" target="_blank" href="https://daflon.es/">Daflon para reducir la inflamación</a> y el cansancio en las piernas.</p>
+	</BlockPlan>
+</Layout>

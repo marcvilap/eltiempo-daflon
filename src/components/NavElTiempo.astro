@@ -1,0 +1,13 @@
+---
+import Icon from '$components/Icon.astro'
+---
+
+<nav class="absolute inset-x-0 top-0 z-40 flex h-14 items-center justify-between bg-white/90 px-8 shadow">
+	<button class="w-3" onclick="history.back()" aria-label="Back">
+		<Icon name="back" />
+	</button>
+	<a class="w-24" target="_blank" rel="noreferrer" href="https://www.eltiempo.es/" aria-label="ElTiempo">
+		<Icon name="eltiempo" />
+	</a>
+	<span class="w-3"></span>
+</nav>

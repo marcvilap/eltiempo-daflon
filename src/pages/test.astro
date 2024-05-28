@@ -1,0 +1,21 @@
+---
+import Layout from '$layouts/Layout.astro'
+import Icon from '$components/Icon.astro'
+import BlockHero from '$components/BlockHero.astro'
+import image from '$assets/images/bg-02.webp'
+---
+
+<Layout>
+	<main class="overflow-clip">
+		<BlockHero {image}>
+			<div class="reveal-group my-auto w-full max-w-2xl text-center">
+				<h2 class="reveal-fade-in-up font-serif text-5xl font-bold">Disfruta de tu plan perfecto para el verano</h2>
+				<p class="reveal-fade-in-up reveal-delay-100 mx-auto my-6 max-w-sm text-lg">Responde a las siguientes preguntas y descubre tu plan ideal para estas vacaciones</p>
+				<a class="reveal-fade-in-up reveal-delay-200 inline-flex h-14 items-center gap-3 bg-blue-900 px-6 text-lg font-medium text-white" href="/test-1">
+					<span>Empezar test</span>
+					<Icon class="w-2" name="next" />
+				</a>
+			</div>
+		</BlockHero>
+	</main>
+</Layout>

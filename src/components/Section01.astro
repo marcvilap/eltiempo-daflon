@@ -1,0 +1,14 @@
+---
+import Icon from '$components/Icon.astro'
+import BlockHero from '$components/BlockHero.astro'
+import bg01 from '$assets/images/bg-01.webp'
+---
+
+<BlockHero image={bg01}>
+	<h2 class="reveal-group my-auto max-w-2xl text-center font-serif text-5xl font-bold">
+		<span class="reveal-fade-in-up block">Bienestar a un solo paso. Prepárate para las vacaciones caminando al aire libre</span>
+	</h2>
+	<a class="w-5" href="#down"><Icon class="animate-bounce" name="down" /></a>
+</BlockHero>
+
+<div id="down"></div>

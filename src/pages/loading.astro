@@ -1,0 +1,18 @@
+---
+import Layout from '$layouts/Layout.astro'
+import BlockHero from '$components/BlockHero.astro'
+import image from '$assets/images/bg-02.webp'
+---
+
+<Layout>
+	<main class="overflow-clip">
+		<BlockHero {image}>
+			<div class="reveal-group my-auto w-full max-w-2xl text-center">
+				<h2 class="reveal-fade-in-up font-serif text-5xl font-bold">Comprobando resultados…</h2>
+				<div class="reveal-fade-in-up reveal-delay-100 mt-6">
+					<div class="mx-auto size-8 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
+				</div>
+			</div>
+		</BlockHero>
+	</main>
+</Layout>

@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Athletics';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url(./assets/fonts/athletics-regular.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'Athletics';
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url(./assets/fonts/athletics-bold.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'Cormorant Infant';
+		font-style: normal;
+		font-weight: 500;
+		font-display: swap;
+		src: url(./assets/fonts/cormorant-infant-medium.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'Cormorant Infant';
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url(./assets/fonts/cormorant-infant-bold.woff2) format('woff2');
+	}
+	@media (max-width: 400px) {
+		html {
+			font-size: 4vw;
+		}
+	}
+	html {
+		@apply scroll-smooth antialiased;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-balance;
+	}
+	p {
+		@apply text-pretty;
+	}
+}
+
+/* REVEAL EFFECT
+****************************************************************************************************/
+.reveal-group:not(.reveal-group-active) .reveal-fade-in-up {
+	opacity: 0;
+	transform: translateY(8rem);
+}
+.reveal-group:not(.reveal-group-active) .reveal-fade-in-down {
+	transform: translateY(-8rem);
+}
+.reveal-group:not(.reveal-group-active) .reveal-fade-in-left {
+	opacity: 0;
+	transform: translateX(-8rem);
+}
+.reveal-group:not(.reveal-group-active) .reveal-fade-in-right {
+	opacity: 0;
+	transform: translateX(8rem);
+}
+.reveal-group-active .reveal-fade-in-up,
+.reveal-group-active .reveal-fade-in-down,
+.reveal-group-active .reveal-fade-in-left,
+.reveal-group-active .reveal-fade-in-right {
+	will-change: opacity, transform;
+	transition-property: opacity, transform;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-group-active .reveal-delay-100 {
+	transition-delay: 100ms;
+}
+.reveal-group-active .reveal-delay-200 {
+	transition-delay: 200ms;
+}
+.reveal-group-active .reveal-delay-300 {
+	transition-delay: 300ms;
+}
+.reveal-group-active .reveal-delay-400 {
+	transition-delay: 400ms;
+}
+.reveal-group-active .reveal-delay-500 {
+	transition-delay: 500ms;
+}
+.reveal-group-active .reveal-delay-600 {
+	transition-delay: 600ms;
+}

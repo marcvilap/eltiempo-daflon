@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+	image: ImageMetadata
+	number: number
+	title: string
+	inverse?: boolean
+}
+
+const { image, number, title, inverse } = Astro.props
+---
+
+<div class="reveal-group grid items-end gap-x-8 md:grid-cols-2 xl:gap-24">
+	<div class:list={[inverse ? 'reveal-fade-in-right' : 'reveal-fade-in-left', inverse && 'md:order-2']}>
+		<Image class="mx-auto w-96 rounded-full" src={image} width="384" alt="" />
+	</div>
+	<div class:list={[inverse ? 'reveal-fade-in-left' : 'reveal-fade-in-right']}>
+		<h2 class="font-serif text-[11rem] font-bold leading-none text-blue-900">{number}</h2>
+		<h3 class="mb-6 font-serif text-3xl font-medium text-blue-900">{title}</h3>
+		<div class="grid gap-6 text-lg"><slot /></div>
+	</div>
+</div>

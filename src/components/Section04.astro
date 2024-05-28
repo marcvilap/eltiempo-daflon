@@ -1,0 +1,30 @@
+---
+import BlockInfo from '$components/BlockInfo.astro'
+import img01 from '$assets/images/img-01.webp'
+import img02 from '$assets/images/img-02.webp'
+import img03 from '$assets/images/img-03.webp'
+import img04 from '$assets/images/img-04.webp'
+import img05 from '$assets/images/img-05.webp'
+---
+
+<section class="overflow-clip py-24">
+	<div class="container grid gap-24">
+		<BlockInfo image={img01} number={1} title="Adopta una Dieta Sana" inverse>
+			<p>Uno de los placeres del verano es sentarse a disfrutar alrededor de la mesa, y no te vamos a recomendar que prescindas de esos grandes momentos, pero sí que no te excedas.</p>
+			<p>Una alimentación equilibrada es clave para mantenernos en buen estado de salud y con energía. Incluye en tu dieta diaria frutas y verduras frescas, cereales integrales y proteínas magras. Evita los alimentos procesados y ricos en azúcares refinados. Además, asegúrate de mantenerte bien hidratado bebiendo suficiente agua a lo largo del día.</p>
+		</BlockInfo>
+		<BlockInfo image={img02} number={2} title="Evita Excesos Innecesarios">
+			<p>Durante los meses previos al verano, es importante evitar los excesos que puedan afectar negativamente a nuestro bienestar. Limita el consumo de alcohol y cafeína, y trata de reducir la ingesta de grasas saturadas y alimentos altos en sodio. Estos cambios no solo te ayudarán a sentirte mejor físicamente, sino que también <strong>mejorarán tu estado de ánimo</strong>.</p>
+		</BlockInfo>
+		<BlockInfo image={img03} number={3} title="Respira Aire Puro" inverse>
+			<p>El aire fresco es esencial para nuestra salud. <strong>Aprovecha cada oportunidad para pasar tiempo al aire libre</strong>, ya sea caminando por el parque, haciendo ejercicio en la naturaleza o simplemente disfrutando de un paseo en bici. Respirar aire puro no solo beneficia a nuestros pulmones, sino que también tiene un efecto positivo en nuestro bienestar mental.</p>
+		</BlockInfo>
+		<BlockInfo image={img04} number={4} title="Usa ropa suelta">
+			<p>Aunque esa prenda nueva estilice tu figura, la salud es prioritaria. La ropa ajustada puede restringir el flujo sanguíneo en las piernas y agravar el riesgo de insuficiencia venosa. Usa <strong>ropa más suelta y cómoda</strong> para evitarlo.</p>
+		</BlockInfo>
+		<BlockInfo image={img05} number={5} title="Cuida tus piernas" inverse>
+			<p>Las piernas cansadas y doloridas son una molestia común, especialmente durante los meses de verano cuando estamos más activos. ¿Nuestra mejor solución? <a class="text-blue-900 underline" target="_blank" href="https://daflon.es/">Daflon</a>, un <strong>tratamiento eficaz de origen natural</strong> para tratar el dolor y la pesadez en las piernas que actúa en el origen del problema.</p>
+			<p>Además, no necesita receta médica. Gracias a sus propiedades antiinflamatorias, Daflon es un medicamento que ayuda a <a class="text-blue-900 underline" target="_blank" href="https://daflon.es/">mejorar la circulación y a reducir la hinchazón</a>. Un must para tu maleta de viaje que te va a permitir disfrutar de tus <strong>actividades veraniegas sin molestias</strong>.</p>
+		</BlockInfo>
+	</div>
+</section>

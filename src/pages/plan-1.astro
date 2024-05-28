@@ -1,0 +1,13 @@
+---
+import Layout from '$layouts/Layout.astro'
+import BlockPlan from '$components/BlockPlan.astro'
+import image from '$assets/images/img-07.webp'
+
+const description = 'Un retiro relajante en una playa paradisíaca o en un spa.'
+---
+
+<Layout>
+	<BlockPlan {description} {image}>
+		<p><strong>Consejo para evitar piernas cansadas:</strong> mantén tus piernas elevadas cuando estés descansando y realiza ligeros masajes con una <a class="text-blue-900 underline" target="_blank" href="https://daflon.es/">crema venotónica como Daflon</a> para mejorar la circulación.</p>
+	</BlockPlan>
+</Layout>

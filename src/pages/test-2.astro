@@ -1,0 +1,14 @@
+---
+import Layout from '$layouts/Layout.astro'
+import BlockTest from '$components/BlockTest.astro'
+import image from '$assets/images/bg-04.webp'
+const title = '¿Cómo prefieres pasar tus tardes de verano?'
+const options = ['Leyendo un libro o tomando el sol', 'Visitando museos o monumentos', 'Realizando deportes o ejercicios al aire libre.']
+const number = 2
+---
+
+<Layout>
+	<main class="overflow-clip">
+		<BlockTest {image} {title} {options} {number} />
+	</main>
+</Layout>

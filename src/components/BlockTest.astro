@@ -1,0 +1,35 @@
+---
+import BlockHero from '$components/BlockHero.astro'
+import Icon from '$components/Icon.astro'
+
+interface Props {
+	image: ImageMetadata
+	title: string
+	number: number
+	options?: string[]
+}
+
+const { image, title, number, options } = Astro.props
+const letter = ['A', 'B', 'C']
+---
+
+<BlockHero {image}>
+	<form class="reveal-group my-auto w-full max-w-xl" data-submit={number}>
+		<h2 class="reveal-fade-in-up font-serif text-5xl font-bold">{title}</h2>
+		<div class="reveal-fade-in-up reveal-delay-100 my-6 grid gap-3">
+			{
+				options?.map((option, index) => (
+					<label class="relative flex cursor-pointer items-center gap-3">
+						<input class="peer absolute left-0 size-8 opacity-0" type="radio" name="test" value={index + 1} required={index === 0} />
+						<span class="relative flex size-8 shrink-0 items-center justify-center rounded-full border border-white font-bold peer-checked:border-none peer-checked:bg-[#EC8A99]">{letter[index]}</span>
+						<span class="text-lg">{option}</span>
+					</label>
+				))
+			}
+		</div>
+		<button class="reveal-fade-in-up reveal-delay-200 inline-flex h-14 items-center gap-3 bg-blue-900 px-6 text-lg font-medium text-white">
+			<span>Siguiente</span>
+			<Icon class="w-2" name="next" />
+		</button>
+	</form>
+</BlockHero>

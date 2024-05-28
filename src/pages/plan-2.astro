@@ -1,0 +1,13 @@
+---
+import Layout from '$layouts/Layout.astro'
+import BlockPlan from '$components/BlockPlan.astro'
+import image from '$assets/images/img-08.webp'
+
+const description = 'Un viaje cultural a una ciudad histórica con visitas a museos y monumentos.'
+---
+
+<Layout>
+	<BlockPlan {description} {image}>
+		<p><strong>Consejo para Evitar Piernas Cansadas:</strong> Toma descansos frecuentes durante tus caminatas, bebe mucha agua y utiliza <a class="text-blue-900 underline" target="_blank" href="https://daflon.es/">Daflon para aliviar la pesadez</a> y el dolor en las piernas.</p>
+	</BlockPlan>
+</Layout>

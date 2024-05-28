@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets'
+import bg06 from '$assets/images/bg-06.webp'
+import img10 from '$assets/images/img-10.webp'
+---
+
+<section class="relative flex items-center overflow-clip py-24 lg:min-h-screen">
+	<Image class="absolute left-0 top-0 size-full object-cover" src={bg06} width="1920" alt="" />
+	<div class="reveal-group container relative">
+		<Image class="reveal-fade-in-down reveal-delay-100 ml-auto w-full max-w-2xl" src={img10} width="672" alt="" />
+	</div>
+</section>

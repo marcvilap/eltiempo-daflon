@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets'
+import Icon from '$components/Icon.astro'
+
+interface Props {
+	image: ImageMetadata
+}
+
+const { image } = Astro.props
+---
+
+<section class="relative overflow-clip bg-black text-white">
+	<Image class="absolute left-0 top-0 size-full object-cover object-bottom opacity-40" src={image} width="1920" alt="" />
+	<div class="container relative flex min-h-screen flex-col items-center gap-8 pb-8 pt-20">
+		<div class="flex flex-col items-center tracking-widest">
+			<span class="text-sm">Caminando hacia el bienestar</span>
+			<span class="mb-3 text-xs">un proyecto de</span>
+			<a class="w-40" href="/"><Icon name="daflon" /></a>
+		</div>
+		<slot />
+	</div>
+</section>

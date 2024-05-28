@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets'
+import Footer from '$components/Footer.astro'
+import Icon from '$components/Icon.astro'
+import img06 from '$assets/images/img-06.webp'
+import img10 from '$assets/images/img-10.webp'
+
+interface Props {
+	image: ImageMetadata
+	description: string
+}
+
+const { image, description } = Astro.props
+---
+
+<main class="overflow-clip">
+	<section class="overflow-clip py-20">
+		<div class="container">
+			<div class="flex flex-col items-center tracking-widest text-blue-900">
+				<span class="text-sm">Caminando hacia el bienestar</span>
+				<span class="mb-3 text-xs">un proyecto de</span>
+				<a class="w-40" href="/"><Icon name="daflon" /></a>
+			</div>
+			<div class="reveal-group mt-8 grid items-end gap-8 lg:grid-cols-5 xl:gap-24">
+				<div class="reveal-fade-in-left lg:col-span-2">
+					<Image class="mx-auto w-40 rounded-full" src={img06} width="160" alt="" />
+					<h2 class="mb-3 font-serif text-5xl font-bold text-blue-900">Plan recomendado:</h2>
+					<h3 class="mb-3 font-serif text-3xl font-medium text-blue-900">{description}</h3>
+					<div class="mb-3 text-lg"><slot /></div>
+					<Image class="mx-auto w-64" src={img10} width="256" alt="" />
+				</div>
+				<div class="reveal-fade-in-right lg:col-span-3">
+					<Image class="aspect-[3/2] w-full object-cover" src={image} width="768" alt="" />
+					<div class="mt-8 text-right">
+						<a class="inline-flex h-14 items-center gap-3 bg-blue-900 px-6 text-lg font-medium text-white" href="/test">
+							<Icon class="w-2" name="prev" />
+							<span>Volver a hacer el test</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<Footer />
