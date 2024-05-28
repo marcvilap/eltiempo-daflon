@@ -19,7 +19,7 @@ const scripts = () => {
 
 	if ((path === `${baseUrl}test-2` || path === `${baseUrl}test-3` || path === `${baseUrl}loading`) && answer === JSON.stringify([0, 0, 0])) {
 		navigate('/')
-	} else if (path === `${baseUrl}loading/`) {
+	} else if (path === `${baseUrl}loading`) {
 		if (answer === '[1,1,1]' || answer === '[1,1,2]' || answer === '[1,1,3]' || answer === '[1,2,1]' || answer === '[1,3,1]' || answer === '[2,1,1]' || answer === '[3,1,1]' || answer === '[1,2,3]' || answer === '[1,3,2]' || answer === '[2,1,3]' || answer === '[2,3,1]' || answer === '[3,1,2]' || answer === '[3,2,1]') {
 			setTimeout(() => navigate(`${baseUrl}plan-1`), 2000)
 		} else if (answer === '[2,2,2]' || answer === '[2,2,1]' || answer === '[2,2,3]' || answer === '[2,1,2]' || answer === '[2,3,2]' || answer === '[1,2,2]' || answer === '[3,2,2]') {

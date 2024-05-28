@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets'
 import Icon from '$components/Icon.astro'
 import bg07 from '$assets/images/bg-07.webp'
+
+const baseUrl = import.meta.env.BASE_URL
 ---
 
 <section class="relative flex items-center overflow-clip py-24 text-blue-900 lg:min-h-screen">
@@ -10,7 +12,7 @@ import bg07 from '$assets/images/bg-07.webp'
 		<div class="reveal-group ml-auto max-w-xl">
 			<p class="reveal-fade-in-up text-xl"><strong>Preparar tu cuerpo y mente para el verano</strong> no requiere grandes sacrificios, sino pequeños cambios en tu rutina diaria que pueden hacer una gran diferencia. La sensación de benignidad que acompaña a esta patología hace que no le demos la importancia que tiene. No subestimes los síntomas de las piernas cansadas y doloridas, ya que pueden ser signos de una enfermedad cardiovascular seria.</p>
 			<h3 class="reveal-fade-in-up reveal-delay-100 my-12 font-serif text-4xl">¡Empieza hoy y siente la diferencia cuando llegue el verano!</h3>
-			<a class="reveal-fade-in-up reveal-delay-200 inline-flex h-14 items-center gap-3 bg-blue-900 px-6 text-lg font-medium leading-none text-white" href="test">
+			<a class="reveal-fade-in-up reveal-delay-200 inline-flex h-14 items-center gap-3 bg-blue-900 px-6 text-lg font-medium leading-none text-white" href={`${baseUrl}test`}>
 				<span>Disfruta de tu plan perfecto para este verano</span>
 				<Icon class="w-2 shrink-0" name="next" />
 			</a>
