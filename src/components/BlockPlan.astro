@@ -11,6 +11,8 @@ interface Props {
 }
 
 const { image, description } = Astro.props
+
+const baseUrl = import.meta.env.BASE_URL
 ---
 
 <main class="overflow-clip">
@@ -19,7 +21,7 @@ const { image, description } = Astro.props
 			<div class="flex flex-col items-center tracking-widest text-blue-900">
 				<span class="text-sm">Caminando hacia el bienestar</span>
 				<span class="mb-3 text-xs">un proyecto de</span>
-				<a class="w-40" href="/"><Icon name="daflon" /></a>
+				<a class="w-40" href={baseUrl}><Icon name="daflon" /></a>
 			</div>
 			<div class="reveal-group mt-8 grid items-end gap-8 lg:grid-cols-5 xl:gap-24">
 				<div class="reveal-fade-in-left lg:col-span-2">
@@ -32,7 +34,7 @@ const { image, description } = Astro.props
 				<div class="reveal-fade-in-right lg:col-span-3">
 					<Image class="aspect-[3/2] w-full object-cover" src={image} width="768" alt="" />
 					<div class="mt-8 text-right">
-						<a class="inline-flex h-14 items-center gap-3 bg-blue-900 px-6 text-lg font-medium text-white" href="test">
+						<a class="inline-flex h-14 items-center gap-3 bg-blue-900 px-6 text-lg font-medium text-white" href={`${baseUrl}test`}>
 							<Icon class="w-2" name="prev" />
 							<span>Volver a hacer el test</span>
 						</a>

@@ -7,6 +7,8 @@ interface Props {
 }
 
 const { image } = Astro.props
+
+const baseUrl = import.meta.env.BASE_URL
 ---
 
 <section class="relative overflow-clip bg-black text-white">
@@ -15,7 +17,7 @@ const { image } = Astro.props
 		<div class="flex flex-col items-center tracking-widest">
 			<span class="text-sm">Caminando hacia el bienestar</span>
 			<span class="mb-3 text-xs">un proyecto de</span>
-			<a class="w-40" href="/"><Icon name="daflon" /></a>
+			<a class="w-40" href={baseUrl}><Icon name="daflon" /></a>
 		</div>
 		<slot />
 	</div>
